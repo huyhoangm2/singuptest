@@ -1,0 +1,52 @@
+<div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {formErrors.email && <span>{formErrors.email}</span>}
+      </div>
+      <div>
+        <label htmlFor="phone">Số điện thoại:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        {formErrors.phone && <span>{formErrors.phone}</span>}
+      </div>
+      <div>
+        <label htmlFor="password">Nhập mật khẩu:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          />
+          {formErrors.password && <span>{formErrors.password}</span>}
+        </div>
+        <div>
+        <label htmlFor="confirmPassword">Nhập lại mật khẩu:</label>
+        <input
+          type="confirmPassword"
+          id="confirmPassword"
+          name="confirmPassword"
+          value={formData.confirmPassword}
+          onChange={handleChange}
+          />
+          {formErrors.confirmPassword && <span>{formErrors.confirmPassword}</span>}
+        </div>
+        
+        </form>
+
+  );
+}  
+export default SignUpForm();
+
+          

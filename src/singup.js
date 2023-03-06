@@ -25,6 +25,8 @@ const SignupSchema = Yup.object().shape({
 
 const SignupForm = () => {
   return (
+    <div className={StyleSheet.container}>
+    <h1 className={styles.title}>Sing Up</h1>
     <Formik
       initialValues={{
         name: "",
@@ -42,42 +44,50 @@ const SignupForm = () => {
       }}
     >
       {({ isSubmitting }) => (
+       
         <Form>
+          <p> </p>
           <div>
             <label htmlFor="name">Tên người dùng</label>
-            <Field type="text" name="name" />
+            <Field type="text" name="name" className={styles.name} />
             <ErrorMessage name="name" component="div" className="error" />
           </div>
+          <p className={styles.khung}> </p>
           <div>
             <label htmlFor="email">Email</label>
-            <Field type="email" name="email" />
+            <Field type="email" name="email" className={styles.email} />
             <ErrorMessage name="email" component="div" className="error" />
           </div>
+          <p className={styles.khung}> </p>
           <div>
             <label htmlFor="phone">Số điện thoại</label>
-            <Field type="text" name="phone" />
+            <Field type="text" name="phone" className={styles.phone} />
             <ErrorMessage name="phone" component="div" className="error" />
           </div>
+          <p className={styles.khung}> </p>
           <div>
             <label htmlFor="password">Mật khẩu</label>
-            <Field type="password" name="password" />
+            <Field type="password" name="password" className={styles.password} />
             <ErrorMessage name="password" component="div" className="error" />
           </div>
+          <p className={styles.khung}> </p>
           <div>
             <label htmlFor="confirmPassword">Nhập lại mật khẩu</label>
-            <Field type="password" name="confirmPassword" />
+            <Field type="password" name="confirmPassword" className={styles.confirmPassword} />
             <ErrorMessage
               name="confirmPassword"
               component="div"
               className="error"
             />
           </div>
+          <p> </p>
           <button type="submit" disabled={isSubmitting}>
             Đăng ký
           </button>
         </Form>
       )}
     </Formik>
+    </div>
   );
 };
 

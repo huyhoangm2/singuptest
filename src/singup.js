@@ -1,4 +1,4 @@
-
+import styles from "./singup.module.css";
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -25,7 +25,7 @@ const SignupSchema = Yup.object().shape({
 
 const SignupForm = () => {
   return (
-    <div className={StyleSheet.container}>
+    <div className={styles.container}>
     <h1 className={styles.title}>Sing Up</h1>
     <Formik
       initialValues={{
@@ -48,31 +48,31 @@ const SignupForm = () => {
         <Form>
           <p> </p>
           <div>
-            <label htmlFor="name">Tên người dùng</label>
+            <label htmlFor="name"></label>
             <Field type="text" name="name" className={styles.name} />
             <ErrorMessage name="name" component="div" className="error" />
           </div>
           <p className={styles.khung}> </p>
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email"></label>
             <Field type="email" name="email" className={styles.email} />
             <ErrorMessage name="email" component="div" className="error" />
           </div>
           <p className={styles.khung}> </p>
           <div>
-            <label htmlFor="phone">Số điện thoại</label>
+            <label htmlFor="phone"></label>
             <Field type="text" name="phone" className={styles.phone} />
             <ErrorMessage name="phone" component="div" className="error" />
           </div>
           <p className={styles.khung}> </p>
           <div>
-            <label htmlFor="password">Mật khẩu</label>
+            <label htmlFor="password"></label>
             <Field type="password" name="password" className={styles.password} />
             <ErrorMessage name="password" component="div" className="error" />
           </div>
           <p className={styles.khung}> </p>
           <div>
-            <label htmlFor="confirmPassword">Nhập lại mật khẩu</label>
+            <label htmlFor="confirmPassword"></label>
             <Field type="password" name="confirmPassword" className={styles.confirmPassword} />
             <ErrorMessage
               name="confirmPassword"

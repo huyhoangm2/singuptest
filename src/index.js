@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import SignupForm from './singup';
+import SignupForm from './signup';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

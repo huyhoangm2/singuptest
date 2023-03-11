@@ -1,4 +1,4 @@
-import styles from "./singup.module.css";
+import styles from "./signup.module.css";
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -26,7 +26,7 @@ const SignupSchema = Yup.object().shape({
 const SignupForm = () => {
   return (
     <div className={styles.container}>
-    <h1 className={styles.title}>Sing Up</h1>
+    <h1 className={styles.title}>CREATE A NEW ACCOUNT </h1>
     <Formik
       initialValues={{
         name: "",
@@ -49,40 +49,40 @@ const SignupForm = () => {
           <p> </p>
           <div>
             <label htmlFor="name"></label>
-            <Field type="text" name="name" className={styles.name} />
-            <ErrorMessage name="name" component="div" className="error" />
+            <Field type="text" placeholder='Name' name="name" className={styles.input} />
+            <ErrorMessage name="name" component="div" className={styles.error} />
           </div>
           <p className={styles.khung}> </p>
           <div>
             <label htmlFor="email"></label>
-            <Field type="email" name="email" className={styles.email} />
-            <ErrorMessage name="email" component="div" className="error" />
+            <Field type="email" placeholder='Email' name="email" className={styles.input} />
+            <ErrorMessage name="email" component="div" className={styles.error} />
           </div>
           <p className={styles.khung}> </p>
           <div>
             <label htmlFor="phone"></label>
-            <Field type="text" name="phone" className={styles.phone} />
-            <ErrorMessage name="phone" component="div" className="error" />
+            <Field type="text" placeholder='Phone' name="phone" className={styles.input} />
+            <ErrorMessage name="phone" component="div" className={styles.error} />
           </div>
           <p className={styles.khung}> </p>
           <div>
             <label htmlFor="password"></label>
-            <Field type="password" name="password" className={styles.password} />
-            <ErrorMessage name="password" component="div" className="error" />
+            <Field type="password" placeholder='Password' name="password" className={styles.input} />
+            <ErrorMessage name="password" component="div" className={styles.error} />
           </div>
           <p className={styles.khung}> </p>
           <div>
             <label htmlFor="confirmPassword"></label>
-            <Field type="password" name="confirmPassword" className={styles.confirmPassword} />
+            <Field type="password" placeholder='ConfirmPassword' name="confirmPassword" className={styles.input} />
             <ErrorMessage
               name="confirmPassword"
               component="div"
-              className="error"
+              className={styles.error}
             />
           </div>
           <p> </p>
-          <button type="submit" disabled={isSubmitting}>
-            Đăng ký
+          <button type="submit" className={styles.btnSubmit} disabled={isSubmitting}>
+          SIGN UP
           </button>
         </Form>
       )}
